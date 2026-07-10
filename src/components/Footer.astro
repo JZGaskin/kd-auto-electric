@@ -1,0 +1,68 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-kd-black text-kd-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-10 h-10 bg-kd-red rounded-lg flex items-center justify-center font-black text-kd-white text-lg">K&D</div>
+          <div>
+            <div class="font-bold text-sm">K & D Auto Electric, Inc.</div>
+            <div class="text-xs text-kd-yellow">Since 1991</div>
+          </div>
+        </div>
+        <p class="text-sm text-kd-gray-400 leading-relaxed">
+          Family-owned auto electric and automotive repair serving Somerset, PA and surrounding areas for over 30 years.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold text-kd-yellow mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-sm text-kd-gray-400 hover:text-kd-yellow transition-colors">Home</a></li>
+          <li><a href="/services/automotive-repair" class="text-sm text-kd-gray-400 hover:text-kd-yellow transition-colors">Auto Repair</a></li>
+          <li><a href="/services/automotive-electric" class="text-sm text-kd-gray-400 hover:text-kd-yellow transition-colors">Auto Electric</a></li>
+          <li><a href="/service-areas" class="text-sm text-kd-gray-400 hover:text-kd-yellow transition-colors">Service Areas</a></li>
+          <li><a href="/contact" class="text-sm text-kd-gray-400 hover:text-kd-yellow transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold text-kd-yellow mb-4 text-sm uppercase tracking-wider">Contact</h3>
+        <div class="space-y-3 text-sm text-kd-gray-400">
+          <p>
+            212 Forward Boulevard<br />
+            Somerset, PA 15501
+          </p>
+          <p>
+            <a href="tel:8144433615" class="hover:text-kd-yellow transition-colors">(814) 443-3615</a><br />
+            <a href="tel:8884433615" class="hover:text-kd-yellow transition-colors">(888) 443-3615</a> (Toll Free)
+          </p>
+          <p>
+            <a href="mailto:kdautoelectric@embarqmail.com" class="hover:text-kd-yellow transition-colors break-all">kdautoelectric@embarqmail.com</a>
+          </p>
+          <div class="text-xs space-y-0.5">
+            <p>Mon-Fri: 8:00 AM - 5:00 PM</p>
+            <p>Saturday: 8:00 AM - 12:00 PM</p>
+            <p>Sunday: CLOSED</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-kd-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-kd-gray-500">
+        &copy; {currentYear} K & D Auto Electric, Inc. All rights reserved.
+      </p>
+      <div class="flex gap-4 text-xs text-kd-gray-500">
+        <a href="/privacy-notice" class="hover:text-kd-yellow transition-colors">Privacy Notice</a>
+        <a href="/website-disclaimer" class="hover:text-kd-yellow transition-colors">Website Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>

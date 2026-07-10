@@ -1,0 +1,71 @@
+---
+const services = [
+  {
+    title: 'Automotive Electric',
+    description: 'Alternator and starter rebuilding exceeding OEM standards, magneto rebuilding, battery testing and replacement, wiring repairs, and complete electrical system diagnostics.',
+    href: '/services/automotive-electric',
+    icon: '⚡',
+  },
+  {
+    title: 'Automotive Repair',
+    description: 'Complete auto repair for any make or model. Computer diagnostics, brake service, tune-ups, oil changes, shocks/struts, fuel injection repair, and PA state inspections.',
+    href: '/services/automotive-repair',
+    icon: '🔧',
+  },
+  {
+    title: 'Farming & Industrial',
+    description: 'Heavy equipment electrical and mechanical repair. Large supplier of John Deere flat face fittings and adapters. Hydraulic hose repair and custom fabrication.',
+    href: '/services/farming-industrial',
+    icon: '🚜',
+  },
+  {
+    title: 'Emergency Vehicle Conversion',
+    description: 'Full emergency vehicle equipment installation for police, fire, and EMS. Light bars, sirens, radio installations, and complete fleet upfitting services.',
+    href: '/services/emergency-vehicle-conversion',
+    icon: '🚨',
+  },
+  {
+    title: 'Transmission & Engine',
+    description: 'Complete transmission and engine replacement for foreign and domestic vehicles. Diagnostics, fluid services, filter changes, and expert installation.',
+    href: '/services/transmission-engine-replacement',
+    icon: '🛞',
+  },
+  {
+    title: 'Intoxalock',
+    description: 'Certified Intoxalock ignition interlock device service. Installation, calibration, monitoring, and removal. PA state-approved provider.',
+    href: '/services/intoxalock',
+    icon: '🔐',
+  },
+];
+---
+
+<section id="services" class="py-20 bg-kd-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Our Services</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-kd-black mt-2">Quality Work at a Fair Price</h2>
+      <p class="text-kd-gray-500 mt-3 max-w-2xl mx-auto">
+        From electrical diagnostics to complete engine replacements, our experienced team handles it all.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service) => (
+        <a
+          href={service.href}
+          class="group bg-kd-white rounded-xl p-6 shadow-sm border border-kd-gray-200 hover:shadow-lg hover:border-kd-red/30 hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <div class="w-12 h-12 bg-kd-red/10 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-kd-red group-hover:scale-110 transition-all duration-200">
+            <span class="group-hover:scale-110 inline-block transition-transform">{service.icon}</span>
+          </div>
+          <h3 class="font-bold text-lg text-kd-black mb-2 group-hover:text-kd-red transition-colors">{service.title}</h3>
+          <p class="text-sm text-kd-gray-500 leading-relaxed">{service.description}</p>
+          <span class="inline-flex items-center gap-1 text-kd-red text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
+            Learn More
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

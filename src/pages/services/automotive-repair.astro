@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactInfo from '../../components/ContactInfo.astro';
+
+const services = [
+  'Computer diagnostics for all makes and models',
+  'Brake service — inspection, repair, and replacement',
+  'Tune-ups — spark plugs, filters, fluids',
+  'Oil changes and preventive maintenance',
+  'Shocks and struts replacement',
+  'Fuel injection repair and cleaning',
+  'Air conditioning service and repair',
+  'Alternators, batteries, and starters',
+  'LED headlight installation and upgrades',
+  'Motorcycle inspections (PA)',
+  'Parts sales and installation',
+  'Full vehicle inspections',
+];
+---
+
+<Layout title="Auto Repair in Somerset, PA | K & D Auto Electric" description="Full-service auto repair in Somerset, PA. Computer diagnostics, brakes, tune-ups, oil changes, PA state inspections, and more. Foreign & domestic. Call (814) 443-3615." canonical="https://kdautoelectric.com/services/automotive-repair">
+  <section class="relative bg-gradient-to-br from-kd-black via-kd-gray-900 to-kd-red/20 py-20">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-kd-gray-400 mb-6">
+        <a href="/" class="hover:text-kd-yellow transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-kd-yellow">Automotive Repair</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Service</span>
+        <h1 class="text-4xl sm:text-5xl font-black text-kd-white mt-2">Automotive Repair</h1>
+        <p class="text-lg text-kd-gray-300 mt-4 leading-relaxed">
+          Complete mechanical repair for foreign and domestic vehicles. From routine maintenance to major repairs, our experienced mechanics keep you on the road.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold text-kd-black mb-6">Repair Services We Offer</h2>
+          <p class="text-kd-gray-600 leading-relaxed mb-8">
+            K &amp; D Auto Electric handles everything from routine oil changes to major mechanical repairs. We service cars, trucks, SUVs, motorcycles, ATVs, and UTVs &mdash; foreign and domestic. Our team believes in doing the job right the first time, with clear explanations and fair pricing.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {services.map((s) => (
+              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
+                <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-sm text-kd-gray-700">{s}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
+            <h3 class="font-bold text-lg text-kd-black mb-2">PA State Inspections</h3>
+            <p class="text-sm text-kd-gray-600 leading-relaxed">
+              We are an authorized Pennsylvania state inspection station. Whether you need an annual safety inspection or emissions testing, trust our certified inspectors to perform a thorough, honest evaluation of your vehicle.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1">
+          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+            <h3 class="font-bold text-kd-black mb-4">Schedule Service</h3>
+            <p class="text-sm text-kd-gray-600 mb-4">
+              Call us to book an appointment or stop by during business hours.
+            </p>
+            <a href="tel:8144433615" class="block w-full bg-kd-red hover:bg-kd-red-dark text-kd-white font-bold text-center px-4 py-3 rounded-lg transition-colors">
+              (814) 443-3615
+            </a>
+            <div class="mt-4 pt-4 border-t border-kd-gray-200 space-y-2 text-xs text-kd-gray-500">
+              <p><strong class="text-kd-black">Hours:</strong><br />Mon-Fri: 8AM-5PM<br />Sat: 8AM-12PM</p>
+              <p><strong class="text-kd-black">Toll Free:</strong><br />(888) 443-3615</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactInfo compact />
+</Layout>

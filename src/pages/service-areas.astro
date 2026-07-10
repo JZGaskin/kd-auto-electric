@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+
+const somersetTowns = ['Somerset', 'Shanksville', 'Meyersdale', 'Windber', 'Stoystown', 'Boswell', 'Friedens', 'Central City', 'Jennerstown', 'Confluence', 'Hollsopple', 'Salisbury', 'Hooversville', 'Indian Lake', 'Garrett', 'Addison', 'Paint', 'New Centerville'];
+const cambriaTowns = ['Johnstown', 'Ebensburg', 'Dale', 'Lorain', 'Beaverdale', 'Daisytown', 'Mundys Corner', 'Vinco', 'Salix', 'Loretto', 'Summerhill', 'Lilly', 'Ferndale', 'East Conemaugh', 'Vintondale', 'Southmont', 'Sidman', 'Scalp Level', 'Northern Cambria', 'Cresson', 'Nanty Glo', 'Portage', 'Westmont', 'South Fork'];
+---
+
+<Layout title="Service Areas in Somerset & Cambria Counties, PA | K & D Auto Electric" description="K & D Auto Electric serves Somerset and Cambria counties in Pennsylvania, including Somerset, Johnstown, Ebensburg, Windber, and surrounding areas. Call (814) 443-3615." canonical="https://kdautoelectric.com/service-areas">
+  <section class="relative bg-gradient-to-br from-kd-black via-kd-gray-900 to-kd-red/20 py-20">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-kd-gray-400 mb-6">
+        <a href="/" class="hover:text-kd-yellow transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-kd-yellow">Service Areas</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Areas Served</span>
+        <h1 class="text-4xl sm:text-5xl font-black text-kd-white mt-2">Service Areas</h1>
+        <p class="text-lg text-kd-gray-300 mt-4 leading-relaxed">
+          Proudly serving Somerset and Cambria counties in southwestern Pennsylvania. From routine maintenance to major repairs, we&apos;re here for our neighbors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Somerset County -->
+        <div class="bg-kd-gray-50 rounded-xl p-8 border border-kd-gray-200">
+          <h2 class="text-2xl font-bold text-kd-black mb-2">Somerset County</h2>
+          <p class="text-sm text-kd-gray-500 mb-6">
+            Our home county. Located right in Somerset, we serve all surrounding communities.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {somersetTowns.map((town) => (
+              <span class="text-sm text-kd-gray-700 bg-kd-white px-3 py-1.5 rounded border border-kd-gray-200 text-center">{town}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Cambria County -->
+        <div class="bg-kd-gray-50 rounded-xl p-8 border border-kd-gray-200">
+          <h2 class="text-2xl font-bold text-kd-black mb-2">Cambria County</h2>
+          <p class="text-sm text-kd-gray-500 mb-6">
+            Conveniently located just minutes away, we serve customers throughout Cambria County.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {cambriaTowns.map((town) => (
+              <span class="text-sm text-kd-gray-700 bg-kd-white px-3 py-1.5 rounded border border-kd-gray-200 text-center">{town}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 p-6 bg-kd-red/5 rounded-xl border border-kd-red/20 text-center">
+        <h3 class="font-bold text-lg text-kd-black mb-2">Don&apos;t see your area?</h3>
+        <p class="text-kd-gray-600 text-sm max-w-xl mx-auto">
+          We regularly serve customers from surrounding counties as well. Give us a call &mdash; we&apos;re happy to discuss your specific needs and let you know if we can help.
+        </p>
+        <a href="tel:8144433615" class="inline-flex items-center gap-2 bg-kd-red hover:bg-kd-red-dark text-kd-white font-bold px-6 py-3 rounded-lg mt-4 transition-colors">
+          (814) 443-3615
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <ContactInfo compact />
+</Layout>

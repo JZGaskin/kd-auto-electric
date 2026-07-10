@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactInfo from '../../components/ContactInfo.astro';
+
+const services = [
+  'Alternator rebuilding — exceeding OEM specifications',
+  'Starter rebuilding and replacement',
+  'Magneto rebuilding for small engines and farm equipment',
+  'Complete battery testing and replacement',
+  'Vehicle wiring repairs and rewiring',
+  'Lighting system diagnostics and repair',
+  'Computerized electrical system diagnostics',
+  'LED headlight installation and upgrades',
+];
+---
+
+<Layout title="Automotive Electric Services in Somerset, PA | K & D Auto Electric" description="Expert auto electric services in Somerset, PA. Alternator and starter rebuilding, wiring repairs, battery service, and electrical diagnostics. Family-owned since 1991." canonical="https://kdautoelectric.com/services/automotive-electric">
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-kd-black via-kd-gray-900 to-kd-red/20 py-20">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-kd-gray-400 mb-6">
+        <a href="/" class="hover:text-kd-yellow transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-kd-yellow">Automotive Electric</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Service</span>
+        <h1 class="text-4xl sm:text-5xl font-black text-kd-white mt-2">Automotive Electric Services</h1>
+        <p class="text-lg text-kd-gray-300 mt-4 leading-relaxed">
+          Expert electrical system diagnostics, repair, and rebuilding for all makes and models. Our technicians bring decades of experience to every electrical job.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold text-kd-black mb-6">Electrical Systems We Service</h2>
+          <p class="text-kd-gray-600 leading-relaxed mb-8">
+            From passenger vehicles to heavy equipment, K &amp; D Auto Electric has been Somerset County&apos;s trusted source for automotive electrical repair since 1991. We specialize in alternator and starter rebuilding that exceeds OEM standards, ensuring your vehicle&apos;s electrical system performs reliably for years to come.
+          </p>
+
+          <ul class="space-y-4">
+            {services.map((s) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-kd-gray-700">{s}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
+            <h3 class="font-bold text-lg text-kd-black mb-2">Alternator &amp; Starter Rebuilding</h3>
+            <p class="text-sm text-kd-gray-600 leading-relaxed">
+              Unlike many shops that only offer replacement units, we rebuild alternators and starters to exceed OEM performance specifications. This means better reliability, longer service life, and often significant cost savings compared to new parts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+            <h3 class="font-bold text-kd-black mb-4">Need Electrical Help?</h3>
+            <p class="text-sm text-kd-gray-600 mb-4">
+              Call us to schedule a diagnostic appointment or stop by the shop.
+            </p>
+            <a href="tel:8144433615" class="block w-full bg-kd-red hover:bg-kd-red-dark text-kd-white font-bold text-center px-4 py-3 rounded-lg transition-colors">
+              (814) 443-3615
+            </a>
+            <div class="mt-4 pt-4 border-t border-kd-gray-200">
+              <p class="text-xs text-kd-gray-500">
+                <strong class="text-kd-black">Hours:</strong><br />
+                Mon-Fri: 8AM-5PM<br />
+                Sat: 8AM-12PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactInfo compact />
+</Layout>

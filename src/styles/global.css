@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kd-red: #E4111A;
+  --color-kd-red-dark: #C01E21;
+  --color-kd-yellow: #FEE504;
+  --color-kd-black: #000000;
+  --color-kd-white: #FFFFFF;
+  --color-kd-gray-50: #f9fafb;
+  --color-kd-gray-100: #f3f4f6;
+  --color-kd-gray-200: #e5e7eb;
+  --color-kd-gray-300: #d1d5db;
+  --color-kd-gray-400: #9ca3af;
+  --color-kd-gray-500: #6b7280;
+  --color-kd-gray-600: #4b5563;
+  --color-kd-gray-700: #374151;
+  --color-kd-gray-800: #1f2937;
+  --color-kd-gray-900: #111827;
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Video placeholder */
+.video-placeholder {
+  background: linear-gradient(135deg, var(--color-kd-red) 0%, var(--color-kd-black) 100%);
+}
