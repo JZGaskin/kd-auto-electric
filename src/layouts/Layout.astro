@@ -7,9 +7,12 @@ export interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
 }
 
-const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Family-owned auto electric and automotive repair serving Somerset, PA since 1991. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical } = Astro.props;
+const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Family-owned auto electric and automotive repair serving Somerset, PA since 1991. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical, ogImage = '/images/KD_logo_dark.png' } = Astro.props;
+const siteUrl = 'https://kdautoelectric.com';
+const fullCanonical = canonical ? `${canonical.startsWith('http') ? '' : siteUrl}${canonical}` : siteUrl;
 ---
 
 <!DOCTYPE html>
@@ -19,10 +22,90 @@ const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair i
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="canonical" href={fullCanonical} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "@id": "https://kdautoelectric.com",
+      "name": "K & D Auto Electric, Inc.",
+      "description": "Auto electric and automotive repair serving Somerset, PA since 1991. PA state inspections, engine performance, alternator rebuilding, and more.",
+      "url": "https://kdautoelectric.com",
+      "telephone": "(814) 443-3615",
+      "email": "kdautoelectric@embarqmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "212 Forward Boulevard",
+        "addressLocality": "Somerset",
+        "addressRegion": "PA",
+        "postalCode": "15501",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.004578,
+        "longitude": -79.081513
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+      ],
+      "priceRange": "$$",
+      "image": "https://kdautoelectric.com/images/KD_logo_dark.png",
+      "sameAs": [
+        "https://www.facebook.com/KD-Auto-Electric-Inc-115634948516623",
+        "https://www.linkedin.com/company/k-d-auto-electric-inc",
+        "https://twitter.com/KDAutoElectric1",
+        "https://www.instagram.com/kdautoelectric/",
+        "https://www.yelp.com/biz/k-and-d-auto-electric-somerset"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Somerset" },
+        { "@type": "AdministrativeArea", "name": "Somerset County" },
+        { "@type": "AdministrativeArea", "name": "Cambria County" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Automotive Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automotive Electrical Repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auto Repair and Maintenance" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PA State Inspections" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engine and Transmission Replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heavy Equipment and Farming Repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Vehicle Conversion" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intoxalock Ignition Interlock" } }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "50",
+        "reviewCount": "50"
+      }
+    })} />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-89C59W5CPL"></script>
     <script>

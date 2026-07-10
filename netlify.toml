@@ -1,3 +1,52 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# 301 Redirects — preserve existing indexed URLs
+[[redirects]]
+  from = "/automotive-repair/*"
+  to = "/services/automotive-repair/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/automotive-electric/*"
+  to = "/services/automotive-electric/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/farming-industrial/*"
+  to = "/services/farming-industrial/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intoxalock/*"
+  to = "/services/intoxalock/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emergency-vehicle-conversion/*"
+  to = "/services/emergency-vehicle-conversion/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/complete-transmission-engine-replacement/*"
+  to = "/services/transmission-engine-replacement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us/*"
+  to = "/contact/"
+  status = 301
+  force = true
+
+# 404 handling
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404

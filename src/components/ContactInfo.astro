@@ -6,86 +6,115 @@ export interface Props {
 const { compact = false } = Astro.props;
 ---
 
-<section class="py-20 bg-kd-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-kd-black mt-2">Stop By or Give Us a Call</h2>
-        <p class="text-kd-gray-500 mt-3 leading-relaxed">
-          Whether you need a diagnostic, state inspection, or major repair, we are here to help. Walk-ins welcome or call ahead to schedule.
-        </p>
+{compact ? (
+  <section class="py-12 bg-kd-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h3 class="text-lg font-bold text-kd-black">Visit or Call Us</h3>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-kd-gray-600">
+          <span>212 Forward Blvd, Somerset, PA 15501</span>
+          <span class="hidden sm:inline text-kd-gray-300">|</span>
+          <a href="tel:8144433615" class="text-kd-red font-medium hover:text-kd-red-dark">(814) 443-3615</a>
+          <span class="hidden sm:inline text-kd-gray-300">|</span>
+          <span>Mon-Fri 8-5, Sat 8-12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
+  <section class="py-20 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-kd-black mt-2">Stop By or Give Us a Call</h2>
+          <p class="text-kd-gray-500 mt-3 leading-relaxed">
+            Whether you need a diagnostic, state inspection, or major repair, we are here to help. Walk-ins welcome or call ahead to schedule.
+          </p>
 
-        <div class="mt-8 space-y-6">
-          <!-- Address -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div class="mt-8 space-y-5">
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-kd-black">Address</h3>
+                <p class="text-sm text-kd-gray-500">
+                  212 Forward Boulevard<br />
+                  Somerset, PA 15501
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-kd-black">Address</h3>
-              <p class="text-sm text-kd-gray-500">
-                212 Forward Boulevard<br />
-                Somerset, PA 15501
-              </p>
-            </div>
-          </div>
 
-          <!-- Phone -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-kd-black">Phone</h3>
+                <p class="text-sm">
+                  <a href="tel:8144433615" class="text-kd-red hover:text-kd-red-dark font-medium">(814) 443-3615</a><br />
+                  <a href="tel:8884433615" class="text-kd-gray-500 hover:text-kd-red text-sm">(888) 443-3615</a> <span class="text-kd-gray-400">(Toll Free)</span><br />
+                  <span class="text-kd-gray-400">Fax: (814) 444-1860</span>
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-kd-black">Phone</h3>
-              <p class="text-sm">
-                <a href="tel:8144433615" class="text-kd-red hover:text-kd-red-dark font-medium">(814) 443-3615</a><br />
-                <a href="tel:8884433615" class="text-kd-gray-500 hover:text-kd-red text-sm">(888) 443-3615</a> <span class="text-kd-gray-400">(Toll Free)</span>
-              </p>
-            </div>
-          </div>
 
-          <!-- Email -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-kd-black">Email</h3>
+                <a href="mailto:kdautoelectric@embarqmail.com" class="text-sm text-kd-red hover:text-kd-red-dark">kdautoelectric@embarqmail.com</a>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-kd-black">Email</h3>
-              <a href="mailto:kdautoelectric@embarqmail.com" class="text-sm text-kd-red hover:text-kd-red-dark">kdautoelectric@embarqmail.com</a>
-            </div>
-          </div>
 
-          <!-- Hours -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-kd-black">Hours</h3>
-              <div class="text-sm text-kd-gray-500 space-y-0.5">
-                <p>Mon &ndash; Fri: 8:00 AM &ndash; 5:00 PM</p>
-                <p>Saturday: 8:00 AM &ndash; 12:00 PM</p>
-                <p>Sunday: CLOSED</p>
+            <!-- Hours, Holidays, Memberships combined -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-kd-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-kd-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-kd-black">Hours</h3>
+                <div class="text-sm text-kd-gray-500 space-y-0.5">
+                  <p>Mon &ndash; Fri: 8:00 AM &ndash; 5:00 PM</p>
+                  <p>Saturday: 8:00 AM &ndash; 12:00 PM</p>
+                  <p>Sunday: CLOSED</p>
+                  <p class="text-xs text-kd-gray-400 mt-1">Closed on major holidays and the first day of deer season.</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Memberships & Additional Info -->
+          <div class="mt-6 p-4 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
+            <p class="text-xs text-kd-gray-500 leading-relaxed">
+              Proud member of the Somerset County Chamber of Commerce, Somerset County Truckers Association, PA Farm Bureau, and NFIB.
+            </p>
+            <p class="text-xs text-kd-gray-500 mt-2">
+              We accept major credit cards, checks, and cash. Gift certificates are available.
+            </p>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-lg border border-kd-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.932427357774!2d-79.081513!3d40.004578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xccf9d85686fd55f9!2sK%20%26%20D%20Auto%20Electric%20Inc!5e0!3m2!1sen!2sus!4v1680000000000"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="K&D Auto Electric Location"
+          ></iframe>
         </div>
       </div>
-
-      <!-- Map -->
-      <div class="h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-lg border border-kd-gray-200">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.932427357774!2d-79.081513!3d40.004578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xccf9d85686fd55f9!2sK%20%26%20D%20Auto%20Electric%20Inc!5e0!3m2!1sen!2sus!4v1680000000000"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="K&D Auto Electric Location"
-        ></iframe>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
+)}

@@ -2,20 +2,28 @@
 import Layout from '../../layouts/Layout.astro';
 import ContactInfo from '../../components/ContactInfo.astro';
 
-const services = [
+const specialties = [
   'Alternator rebuilding — exceeding OEM specifications',
   'Starter rebuilding and replacement',
   'Magneto rebuilding for small engines and farm equipment',
+  'Generator rebuilding and replacement',
+];
+
+const electricalServices = [
+  'Computer diagnostics — check engine lights, cruise control, AC',
   'Complete battery testing and replacement',
-  'Vehicle wiring repairs and rewiring',
-  'Lighting system diagnostics and repair',
-  'Computerized electrical system diagnostics',
-  'LED headlight installation and upgrades',
+  'Vehicle wiring repairs and full rewiring',
+  'Lighting system diagnostics, repair, and LED upgrades',
+  'High-output alternator conversions',
+  'Remote starter installation',
+  'Backup camera installation',
+  'Bluetooth, navigation, and stereo installation',
+  'Snow plow electrical system repair',
+  'Marine and recreational vehicle electrical work',
 ];
 ---
 
-<Layout title="Automotive Electric Services in Somerset, PA | K & D Auto Electric" description="Expert auto electric services in Somerset, PA. Alternator and starter rebuilding, wiring repairs, battery service, and electrical diagnostics. Family-owned since 1991." canonical="https://kdautoelectric.com/services/automotive-electric">
-  <!-- Hero -->
+<Layout title="Automotive Electric Services in Somerset, PA | K & D Auto Electric" description="Expert auto electric services in Somerset, PA. Alternator/ starter rebuilding, remote starters, backup cameras, Bluetooth, marine RV electrical, wiring repairs. Family-owned since 1991." canonical="https://kdautoelectric.com/services/automotive-electric">
   <section class="relative bg-gradient-to-br from-kd-black via-kd-gray-900 to-kd-red/20 py-20">
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="text-sm text-kd-gray-400 mb-6">
@@ -33,34 +41,53 @@ const services = [
     </div>
   </section>
 
-  <!-- Content -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div class="lg:col-span-2">
-          <h2 class="text-2xl font-bold text-kd-black mb-6">Electrical Systems We Service</h2>
-          <p class="text-kd-gray-600 leading-relaxed mb-8">
-            From passenger vehicles to heavy equipment, K &amp; D Auto Electric has been Somerset County&apos;s trusted source for automotive electrical repair since 1991. We specialize in alternator and starter rebuilding that exceeds OEM standards, ensuring your vehicle&apos;s electrical system performs reliably for years to come.
+          <h2 class="text-2xl font-bold text-kd-black mb-6">Rebuilding &amp; Replacement</h2>
+          <p class="text-kd-gray-600 leading-relaxed mb-6">
+            K &amp; D Auto Electric has been Somerset County&apos;s trusted source for automotive electrical repair since 1991. We rebuild and stock new alternators, starters, generators, and magnetos for any make or model. Each rebuilt unit exceeds OEM standards &mdash; if you are not satisfied, we replace it.
           </p>
 
-          <ul class="space-y-4">
-            {services.map((s) => (
-              <li class="flex items-start gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+            {specialties.map((s) => (
+              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
                 <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span class="text-kd-gray-700">{s}</span>
-              </li>
+                <span class="text-sm text-kd-gray-700">{s}</span>
+              </div>
             ))}
-          </ul>
+          </div>
 
-          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
+          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200 mb-10">
             <h3 class="font-bold text-lg text-kd-black mb-2">Alternator &amp; Starter Rebuilding</h3>
             <p class="text-sm text-kd-gray-600 leading-relaxed">
-              Unlike many shops that only offer replacement units, we rebuild alternators and starters to exceed OEM performance specifications. This means better reliability, longer service life, and often significant cost savings compared to new parts.
+              Unlike many shops that only offer replacement units, we rebuild alternators and starters to exceed OEM performance specifications. This means better reliability, longer service life, and often significant cost savings compared to new parts. All work is guaranteed for six months to one year.
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-kd-black mb-6">Installation &amp; Diagnostics</h2>
+          <p class="text-kd-gray-600 leading-relaxed mb-6">
+            Beyond rebuilding, we offer a full range of electrical installation and diagnostic services for cars, trucks, SUVs, marine, and recreational vehicles:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {electricalServices.map((s) => (
+              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
+                <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-sm text-kd-gray-700">{s}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
+            <h3 class="font-bold text-lg text-kd-black mb-2">Modern Vehicle Upgrades</h3>
+            <p class="text-sm text-kd-gray-600 leading-relaxed">
+              We install modern convenience and safety features in vehicles of any age &mdash; remote starters for cold Somerset mornings, backup cameras for safer reversing, Bluetooth hands-free and stereo upgrades, and LED lighting conversions. If you can imagine the upgrade, we can likely make it happen.
             </p>
           </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="lg:col-span-1">
           <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Need Electrical Help?</h3>
@@ -70,12 +97,9 @@ const services = [
             <a href="tel:8144433615" class="block w-full bg-kd-red hover:bg-kd-red-dark text-kd-white font-bold text-center px-4 py-3 rounded-lg transition-colors">
               (814) 443-3615
             </a>
-            <div class="mt-4 pt-4 border-t border-kd-gray-200">
-              <p class="text-xs text-kd-gray-500">
-                <strong class="text-kd-black">Hours:</strong><br />
-                Mon-Fri: 8AM-5PM<br />
-                Sat: 8AM-12PM
-              </p>
+            <div class="mt-4 pt-4 border-t border-kd-gray-200 space-y-2 text-xs text-kd-gray-500">
+              <p><strong class="text-kd-black">Hours:</strong><br />Mon-Fri: 8AM-5PM<br />Sat: 8AM-12PM</p>
+              <p><strong class="text-kd-black">Toll Free:</strong><br />(888) 443-3615</p>
             </div>
           </div>
         </div>

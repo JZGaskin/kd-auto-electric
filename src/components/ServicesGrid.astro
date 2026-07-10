@@ -2,39 +2,39 @@
 const services = [
   {
     title: 'Automotive Electric',
-    description: 'Alternator and starter rebuilding exceeding OEM standards, magneto rebuilding, battery testing and replacement, wiring repairs, and complete electrical system diagnostics.',
+    description: 'Alternator and starter rebuilding exceeding OEM standards, magneto rebuilding, battery testing, wiring repairs, remote starters, backup cameras, Bluetooth, stereo, and complete electrical diagnostics.',
     href: '/services/automotive-electric',
-    icon: '⚡',
+    image: '',
   },
   {
     title: 'Automotive Repair',
-    description: 'Complete auto repair for any make or model. Computer diagnostics, brake service, tune-ups, oil changes, shocks/struts, fuel injection repair, and PA state inspections.',
+    description: 'Complete auto repair for any make or model. Computer diagnostics, brake service, tune-ups, oil changes, shocks/struts, fuel injection, AC repair, PA state inspections, and motorcycle inspections.',
     href: '/services/automotive-repair',
-    icon: '🔧',
+    image: '',
   },
   {
     title: 'Farming & Industrial',
-    description: 'Heavy equipment electrical and mechanical repair. Large supplier of John Deere flat face fittings and adapters. Hydraulic hose repair and custom fabrication.',
+    description: 'Heavy equipment electrical and mechanical repair. John Deere flat face fittings supplier. Hydraulic hose repair, voltage conversions, high-output alternators, and custom fabrication.',
     href: '/services/farming-industrial',
-    icon: '🚜',
+    image: '',
   },
   {
     title: 'Emergency Vehicle Conversion',
-    description: 'Full emergency vehicle equipment installation for police, fire, and EMS. Light bars, sirens, radio installations, and complete fleet upfitting services.',
+    description: 'Full emergency vehicle upfitting for police, fire, and EMS. Light bars, sirens, radios, gun racks, partitions, and complete fleet maintenance.',
     href: '/services/emergency-vehicle-conversion',
-    icon: '🚨',
+    image: '',
   },
   {
     title: 'Transmission & Engine',
-    description: 'Complete transmission and engine replacement for foreign and domestic vehicles. Diagnostics, fluid services, filter changes, and expert installation.',
+    description: 'Complete transmission and engine replacement for foreign and domestic vehicles. Diagnostics, fluid services, filter changes, programming, and expert installation.',
     href: '/services/transmission-engine-replacement',
-    icon: '🛞',
+    image: '',
   },
   {
     title: 'Intoxalock',
-    description: 'Certified Intoxalock ignition interlock device service. Installation, calibration, monitoring, and removal. PA state-approved provider.',
+    description: 'Certified Intoxalock ignition interlock device service. Installation, calibration, lockout, maintenance, and removal for PA state requirements.',
     href: '/services/intoxalock',
-    icon: '🔐',
+    image: '',
   },
 ];
 ---
@@ -53,17 +53,29 @@ const services = [
       {services.map((service) => (
         <a
           href={service.href}
-          class="group bg-kd-white rounded-xl p-6 shadow-sm border border-kd-gray-200 hover:shadow-lg hover:border-kd-red/30 hover:-translate-y-0.5 transition-all duration-200"
+          class="group bg-kd-white rounded-xl overflow-hidden shadow-sm border border-kd-gray-200 hover:shadow-lg hover:border-kd-red/30 hover:-translate-y-0.5 transition-all duration-200"
         >
-          <div class="w-12 h-12 bg-kd-red/10 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-kd-red group-hover:scale-110 transition-all duration-200">
-            <span class="group-hover:scale-110 inline-block transition-transform">{service.icon}</span>
+          <!-- Photo slot --{@replace with real K&D photos from Zach} -->
+          <div class="h-44 bg-kd-gray-100 flex items-center justify-center overflow-hidden">
+            {service.image ? (
+              <img src={service.image} alt={service.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            ) : (
+              <div class="text-center px-4">
+                <div class="w-12 h-12 bg-kd-red/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-6 h-6 text-kd-red/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+                <p class="text-xs text-kd-gray-400 italic">Photo coming soon</p>
+              </div>
+            )}
           </div>
-          <h3 class="font-bold text-lg text-kd-black mb-2 group-hover:text-kd-red transition-colors">{service.title}</h3>
-          <p class="text-sm text-kd-gray-500 leading-relaxed">{service.description}</p>
-          <span class="inline-flex items-center gap-1 text-kd-red text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
-            Learn More
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </span>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-kd-black mb-2 group-hover:text-kd-red transition-colors">{service.title}</h3>
+            <p class="text-sm text-kd-gray-500 leading-relaxed">{service.description}</p>
+            <span class="inline-flex items-center gap-1 text-kd-red text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
+              Learn More
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
         </a>
       ))}
     </div>
