@@ -1,0 +1,8 @@
+# 301 Redirects — preserve existing indexed URLs
+/automotive-repair/*   /services/automotive-repair/   301!
+/automotive-electric/*   /services/automotive-electric/   301!
+/farming-industrial/*   /services/farming-industrial/   301!
+/intoxalock/*   /services/intoxalock/   301!
+/emergency-vehicle-conversion/*   /services/emergency-vehicle-conversion/   301!
+/complete-transmission-engine-replacement/*   /services/transmission-engine-replacement/   301!
+/contact-us/*   /contact/   301!
