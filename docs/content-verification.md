@@ -1,138 +1,101 @@
 # Content & Claim Verification
 
-> **Status:** DRAFT — Every item below requires owner (Zach) confirmation before the redesign goes live on kdautoelectric.com.
-> Last updated: 2026-07-10
+> **Status:** RESOLVED — All items below were answered by the owner (Jeremy) on 2026-07-31.
+> The owner's exact answers are the authoritative specification for the site.
+> Last updated: 2026-07-31
 
 ---
 
-## Verified Claims (Confirmed on Current Site)
+## ✅ Confirmed by Owner (On the Site)
 
-These are stated verbatim or clearly inferable from https://kdautoelectric.com:
-
-| Claim | Source Page | Verbatim Text (if available) |
-|---|---|---|
-| Established since 1991 | Home, multiple pages | "established in 1991" |
-| Alternator/starter rebuilding exceeding OEM standards | Home, automotive-electric | "Each rebuilt unit exceeds OEM standards" |
-| John Deere flat face fittings supplier—large inventory | Home, farming-industrial | "major supplier of John Deere flat face fittings" |
-| PA state inspections | Home, automotive-repair | "thorough state inspections that meet Pennsylvania standards" |
-| Motorcycle inspections (PA) | automotive-repair | mentioned in service list |
-| Foreign & domestic vehicles | Home, automotive-repair | "any make or model, foreign or domestic" |
-| 6-month to 1-year warranty on work | automotive-electric | "All work is guaranteed for six months to one year" |
-| Accepts major credit cards, checks, cash | contact-us | "accept major credit cards, checks, and cash" |
-| Gift certificates available | contact-us | "Gift certificates are available" |
-| Closed on major holidays and first day of deer season | contact-us | "closed on major holidays and the first day of deer season" |
-| Member: Somerset County Chamber of Commerce | contact-us | "proud members of the Somerset County Chamber of Commerce" |
-| Member: Somerset County Truckers Association | contact-us | stated directly |
-| Member: PA Farm Bureau | contact-us | stated directly |
-| Member: NFIB | contact-us | stated directly |
-| Intoxalock certified installer | intoxalock | "certified Intoxalock installer" |
-| Intoxalock installation takes 3–4 hours | intoxalock | "Installation takes three to four hours" |
-| Certificate provided after Intoxalock install | intoxalock | "demonstrate device use and provide a certificate" |
-| Intoxalock: removal on exact date, ship back | intoxalock | "ensures the exact removal date is clear and handles shipping the device back" |
-| Serves passenger, commercial, farming, industrial, heavy equipment | Home | stated directly |
-| Walk-ins welcome | contact-us, automotive-electric | implied by contact page — **verify phrasing with owner** |
-| Cars, trucks, SUVs, motorcycles, ATVs, UTVs | automotive-repair | stated directly |
-
----
-
-## Claims Requiring Owner Confirmation
-
-These appear in the redesign but were NOT explicitly confirmed on the current live site. Mark each as VERIFIED or REMOVE before launch.
-
-### ✅ Confirmed / Already in Current Site
-
-| # | Claim | Where It Appears in Redesign | Basis |
-|---|---|---|---|
-| 1 | "Family-owned" | Home (trust badges), Hero subtitle, farming-industrial | Current site says "since 1991" but never uses "family-owned." Needs owner confirmation. |
-| 2 | "Walk-ins welcome" | ContactInfo component paragraph | Current site only lists hours; doesn't explicitly say walk-ins. |
-| 3 | "Emissions testing" | automotive-repair page | Current site says "state inspections" but doesn't mention emissions explicitly. PA emissions applies only in some counties. Somerset County may not require it. |
-| 4 | "Free estimates" | engine-replacement sidebar | Not stated on current site. Confirm pricing model. |
-| 5 | "Mobile farm-equipment service" | farming-industrial service list | Current site says "prompt hydraulic hose services" but doesn't explicitly claim mobile on-site service. |
-| 6 | "Custom hydraulic fabrication" | farming-industrial, ServicesGrid | Current site says "building new hoses quickly" — verify fabrication capability. |
-| 7 | "Used engine sourcing" | engine-replacement service list | Current site says "guide toward affordable options" — verify they source used engines themselves. |
-| 8 | "Intoxalock monitoring and compliance" | intoxalock page | Current site says "installation, calibration, lockout, maintenance, and removal" — does "monitoring" match their actual service scope? |
-| 9 | "PA state-approved provider" | intoxalock page | Current site says "certified Intoxalock installer" — verify whether "PA state-approved" is accurate phrasing. |
-| 10 | "Emergency-department relationships" | emergency-vehicle page | Current site says "supporting local authorities" — verify they can claim "trusted by local departments." |
-| 11 | "Transformer/voltage conversions" | farming-industrial (missing from current) | Needs confirmation this is a service they offer. |
-| 12 | "High-output alternator conversions" | farming-industrial / electric pages | Needs confirmation. |
-| 13 | "Parts sales and installation" | automotive-repair service list | Current automotive-repair page lists "parts sales" — verify. |
-| 14 | "Fleet maintenance for emergency vehicles" | emergency-vehicle service list | Current site says "replacement parts and mechanical services to keep fleets running" — verify fleet maintenance scope. |
+| Item | Owner Answer |
+|---|---|
+| Branding — "Quality Service Since 1991" | Confirmed, used on everything |
+| Branding — "Quality STARTS Here" | Confirmed, used on everything (STARTS capitalization preserved) |
+| Business name | K & D Auto Electric, Inc. |
+| Ownership | Locally, family owned. Jeremy is the owner and president. |
+| Appointment wording | "Call or stop in for an appointment." (owner wording; no walk-ins/appointment-preferred/schedule-online phrasing) |
+| Holiday closure | Closed on major holidays |
+| Deer season closure | Closed the first day of deer season |
+| PA state inspections | "PA state inspections for cars, trucks up to 1 ton, including dual wheels, motorcycles, motor homes, and trailers 10,000 pounds and under." No emissions testing. |
+| Free estimates | Limited to starter, generator, alternator, and magneto rebuilds only |
+| On-site service | "On-site service is available depending on our schedule." (schedule limitation kept) |
+| Engines | New and used replacement engines are available |
+| Hydraulic hoses | "Hydraulic hose repair and custom manufacturing." + "Huge inventory of hose and fittings." + "Hoses are made while you wait." |
+| Direct parts sales | Automotive and equipment parts are sold directly to customers |
+| Emergency vehicles | Ongoing fleet maintenance for emergency vehicles; "Trusted by local police, fire, and EMS departments." No individual departments named. |
+| Electrical services | High-output alternator conversions; electrical voltage conversions |
+| Gift certificates | "Gift certificates are available in any amount and for any parts or service." |
+| Payments | Cash, check, and credit card |
+| Warranty | "Work is guaranteed for six months to one year." |
+| Intoxalock | "Certified Intoxalock installer." Services: installation, calibration, lockout service, maintenance, removal. Installation takes three to four hours. Certificate provided after installation. |
+| Intoxalock phone | (833) 274-0238 (kept on the Intoxalock page only) |
+| Memberships | Somerset County Chamber of Commerce, Somerset County Truckers Association, PA Farm Bureau, NFIB — all current |
+| Reviews | Six named 5-star Google reviews supplied by the owner, published verbatim (Darin Sharar, Makeda V, stacy mullins, Candace Collingridge, Tonya Gonzalez, John Silk) |
 
 ---
 
-## Missing Business Details (Need Source)
+## ❌ Removed or Corrected (Owner Answers)
 
-These appear on the **current** kdautoelectric.com but are absent from the redesign. Restore or confirm:
-
-| Detail | Current Site Location | Status |
-|---|---|---|
-| Fax number: (814) 444-1860 | contact-us | MISSING from ContactInfo component |
-| Intoxalock dedicated phone number (if any) | — | CURRENT SITE uses main number. **Verify** if there's a separate Intoxalock line. |
-| Memberships list (Chamber, Truckers, Farm Bureau, NFIB) | contact-us | MISSING from ContactInfo |
-| Holiday/deer season closure | contact-us | MISSING from ContactInfo |
-| Gift certificates available | contact-us | MISSING |
-| Services: remote starters | automotive-electric | MISSING from electric page |
-| Services: backup cameras | automotive-electric | MISSING from electric page |
-| Services: Bluetooth/navigation/stereo | automotive-electric | MISSING from electric page |
-| Services: snow plow electrical | automotive-electric | MISSING from electric page |
-| Services: marine/RV electrical | automotive-electric | MISSING from electric page |
-| Services: high-output alternator conversions | automotive-electric | MISSING from electric page |
-| Services: rewiring | farming-industrial | PARTIALLY PRESENT |
-| Services: voltage conversions | farming-industrial | MISSING |
-| Intoxalock: lockout service | intoxalock | MISSING |
-| Intoxalock: how device works (blow sample) | intoxalock | MISSING — useful explanation for customers |
-| Intoxalock: bring necessary documents | intoxalock | MISSING |
-| Emergency vehicle: gun racks | emergency-vehicle | MISSING |
-| Emergency vehicle: window bars | emergency-vehicle | MISSING |
+| Item | Action |
+|---|---|
+| Toll-free number (888) 443-3615 | Removed everywhere (no longer active) |
+| Old email kdautoelectric@embarqmail.com | Removed everywhere; replaced with kdautoelectric@gmail.com |
+| "Walk-ins welcome" | Removed — owner did not say this |
+| General free-estimate claim | Removed — estimates only on the four rebuild types |
+| Unqualified mobile/on-site service claim | Corrected to "On-site service is available depending on our schedule." |
+| Intoxalock monitoring / compliance monitoring | Removed |
+| "PA state-approved provider" | Removed — only "Certified Intoxalock installer" is used |
+| Removal-paperwork requirement | Removed — owner confirmed NO paperwork required for removal |
+| Generic/invented testimonials | Replaced with the owner's six exact reviews |
+| Unverified rating/review count | Not published — no AggregateRating or reviewCount in structured data or UI |
+| Contact form | None exists — phone only per owner ("No, just phone number.") |
+| "Highly Rated by Customers" trust badge | Removed (implied aggregate rating); replaced with owner-confirmed claims |
+| "Fair Pricing" trust badge / "Quality Work at a Fair Price" heading | Removed (not owner-confirmed); replaced with owner branding |
 
 ---
 
-## Claims in Current Site NOT in Redesign (Review for Inclusion)
+## ✅ Business Information (Owner-Supplied)
 
-| Claim | Current Site Location | Should Restore? |
-|---|---|---|
-| "Carries new and rebuilt alternators, starters, generators, magnetos" | automotive-electric | YES — differentiator |
-| "Work that exceeds OEM standards" | automotive-electric | YES — in electric page already partly |
-| "Gun racks" for emergency vehicles | emergency-vehicle | YES — specific service detail |
-| "Window bars" for emergency vehicles | emergency-vehicle | YES |
-| "Transform vehicles into functional mobile offices" | somerset-county-pa | YES — good phrase for emergency page |
-| "Proper driving habits to maximize vehicle longevity" | automotive-repair | Nice-to-have |
-| "Winterization" | Not in current site | UNKNOWN — verify |
+- Address: 212 Forward Boulevard, Somerset, PA 15501
+- Main phone: (814) 443-3615
+- Intoxalock phone: (833) 274-0238
+- Fax: (814) 444-1860
+- Email: kdautoelectric@gmail.com
+- Hours: Mon–Fri 8:00 AM–5:00 PM; Sat 8:00 AM–12:00 PM; Sunday closed
+- Closed on major holidays and the first day of deer season
 
 ---
 
-## Phrasing to Correct
+## ⏳ Still Missing (Owner Input)
 
-| Current Site Wording | Redesign Wording | Issue |
-|---|---|---|
-| "Computer diagnostics, check engine lights, cruise control, AC" | "Computer diagnostics for all makes and models" | Lost specificity (check engine, cruise, AC) |
-| "Bluetooth systems, remote starters, stereo/navigation upgrades, backup cameras" | Not listed in electric page | MISSING entirely |
-| "Snow plow repairs" | Not listed | MISSING |
-| "Marine and recreational vehicles" | Not listed | MISSING |
-| "Intoxalock lockout" | Not listed as separate service | NEEDS restoration |
-| "Free estimates" on engine-replacement sidebar | Not confirmed on current site | Needs verification |
+- **Photos** — The owner said photos, commercials, and the logo were sent, but only the logo files (KD_logo_dark.png, KD_logo_light.png) and derived favicons are in the repository. Additional photos of the building and sign are still expected. Service card images currently show "Photo coming soon" placeholders.
+- **Commercial video** — The Hero component has an unused Vimeo embed (id 1101530068) that is not displayed. No commercial file is present in the repository. If the owner's commercial is available, it can be wired in (no autoplay with sound, playback controls, poster image).
+- **Two unnamed reviews** — Two additional reviews were supplied without customer names and were intentionally NOT published. They will be added once names are provided.
+- **Membership logos** — Only use organization logos the owner supplies or approves; none received yet.
+- **Aggregate rating / review count** — Not provided; AggregateRating stays out of structured data until numbers are supplied.
 
 ---
 
-## Google Reviews (Current Site)
+## ✅ Verification Checklist (Completed)
 
-The current site uses a Google review carousel widget (dynamically loaded). I cannot extract exact review text via scraping. **ACTION:** Owner needs to provide the exact review text and names if they want real testimonials.
-
----
-
-## Verification Checklist for Owner
-
-- [ ] Family-owned — yes or no?
-- [ ] Walk-ins welcome — yes or no?
-- [ ] Emissions testing performed — yes or no? (Somerset County may not require)
-- [ ] Free estimates — yes or no?
-- [ ] Mobile farm equipment service — yes or no?
-- [ ] Custom hydraulic fabrication — yes or no?
-- [ ] Used engine sourcing — yes or no?
-- [ ] Intoxalock "monitoring" — accurate term?
-- [ ] "PA state-approved provider" — accurate or should be "certified Intoxalock installer"?
-- [ ] Any emergency department names they can share as references?
-- [ ] High-output alternator conversions — offered?
-- [ ] Voltage conversions — offered?
-- [ ] Do they want the county pages preserved or consolidated?
-- [ ] Real review text (copy-paste from Google) for the testimonials section
+- [x] Toll-free number gone
+- [x] Old email gone, new Gmail present
+- [x] No contact form
+- [x] Main phone correct (814) 443-3615
+- [x] Intoxalock phone correct (833) 274-0238 on Intoxalock page
+- [x] "Call or stop in for an appointment" used
+- [x] Owner branding used (Quality Service Since 1991 / Quality STARTS Here)
+- [x] Inspection wording matches owner's answer
+- [x] Free estimates limited to listed rebuilds
+- [x] On-site service includes schedule condition
+- [x] Hydraulic wording matches owner's wording
+- [x] Emergency-service wording matches owner's answer
+- [x] Intoxalock monitoring removed
+- [x] Removal-paperwork requirement removed
+- [x] Reviews exact and named (6)
+- [x] No aggregate rating/review count published
+- [x] Redirects still work
+- [x] County pages return HTTP 200
+- [x] Favicon files return HTTP 200
+- [x] Production build passes

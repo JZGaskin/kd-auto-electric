@@ -10,7 +10,7 @@ export interface Props {
   ogImage?: string;
 }
 
-const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Family-owned auto electric and automotive repair serving Somerset, PA since 1991. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical, ogImage = '/images/KD_logo_dark.png' } = Astro.props;
+const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Quality Service Since 1991. Locally, family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical, ogImage = '/images/KD_logo_dark.png' } = Astro.props;
 const siteUrl = 'https://kdautoelectric.com';
 const fullCanonical = canonical ? `${canonical.startsWith('http') ? '' : siteUrl}${canonical}` : siteUrl;
 ---
@@ -53,10 +53,11 @@ const fullCanonical = canonical ? `${canonical.startsWith('http') ? '' : siteUrl
       "@type": "AutoRepair",
       "@id": "https://kdautoelectric.com",
       "name": "K & D Auto Electric, Inc.",
-      "description": "Auto electric and automotive repair serving Somerset, PA since 1991. PA state inspections, engine performance, alternator rebuilding, and more.",
+      "slogan": "Quality Service Since 1991",
+      "description": "Quality Service Since 1991. Locally, family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, and more.",
       "url": "https://kdautoelectric.com",
       "telephone": "(814) 443-3615",
-      "email": "kdautoelectric@embarqmail.com",
+      "email": "kdautoelectric@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "212 Forward Boulevard",
