@@ -1,21 +1,22 @@
 ---
 export interface Props {
   compact?: boolean;
+  dark?: boolean;
 }
 
-const { compact = false } = Astro.props;
+const { compact = false, dark = false } = Astro.props;
 ---
 
 {compact ? (
-  <section class="py-12 bg-kd-gray-50">
+  <section class={`py-12 ${dark ? 'bg-kd-red' : 'bg-kd-gray-50'}`}>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h3 class="text-lg font-bold text-kd-black">Visit or Call Us</h3>
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-kd-gray-600">
-          <span><a href="https://maps.google.com/?cid=6714655095466963597" target="_blank" rel="noopener noreferrer" class="hover:text-kd-red transition-colors">212 Forward Blvd, Somerset, PA 15501</a></span>
-          <span class="hidden sm:inline text-kd-gray-300">|</span>
-          <a href="tel:8144433615" class="text-kd-red font-medium hover:text-kd-red-dark">(814) 443-3615</a>
-          <span class="hidden sm:inline text-kd-gray-300">|</span>
+        <h3 class={`text-lg font-bold ${dark ? 'text-kd-white' : 'text-kd-black'}`}>Visit or Call Us</h3>
+        <div class={`mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm ${dark ? 'text-kd-white/90' : 'text-kd-gray-600'}`}>
+          <span><a href="https://maps.google.com/?cid=6714655095466963597" target="_blank" rel="noopener noreferrer" class={`transition-colors ${dark ? 'text-kd-white/90 hover:text-kd-yellow' : 'text-kd-gray-600 hover:text-kd-red'}`}>212 Forward Blvd, Somerset, PA 15501</a></span>
+          <span class={`hidden sm:inline ${dark ? 'text-kd-white/40' : 'text-kd-gray-300'}`}>|</span>
+          <a href="tel:8144433615" class={`transition-colors ${dark ? 'text-kd-white font-bold hover:text-kd-yellow' : 'text-kd-red font-medium hover:text-kd-red-dark'}`}>(814) 443-3615</a>
+          <span class={`hidden sm:inline ${dark ? 'text-kd-white/40' : 'text-kd-gray-300'}`}>|</span>
           <span>Mon-Fri 8-5, Sat 8-12</span>
         </div>
       </div>

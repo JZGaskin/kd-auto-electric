@@ -41,6 +41,7 @@ const electricalServices = [
     </div>
   </section>
 
+  <!-- White: Rebuilding & Replacement + sticky call card -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
@@ -49,58 +50,29 @@ const electricalServices = [
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div class="lg:col-span-2">
           <h2 class="text-2xl font-bold text-kd-black mb-6">Rebuilding &amp; Replacement</h2>
-          <p class="text-kd-gray-600 leading-relaxed mb-6">
+          <p class="text-kd-gray-600 leading-relaxed mb-8">
             K &amp; D Auto Electric has been Somerset County&apos;s trusted source for automotive electrical repair since 1991. We rebuild and stock new alternators, starters, generators, and magnetos for any make or model. Each rebuilt unit exceeds OEM standards.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5 mb-10">
             {specialties.map((s) => (
-              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
+              <div class="flex items-start gap-3 border-b border-kd-gray-200 pb-4">
                 <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span class="text-sm text-kd-gray-700">{s}</span>
               </div>
             ))}
           </div>
 
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200 mb-10">
+          <div class="bg-kd-gray-50/60 rounded-xl p-6 border border-kd-gray-200 mb-10">
             <h3 class="font-bold text-lg text-kd-black mb-2">Alternator &amp; Starter Rebuilding</h3>
             <p class="text-sm text-kd-gray-600 leading-relaxed">
               Unlike many shops that only offer replacement units, we rebuild alternators and starters to exceed OEM performance specifications. All work is guaranteed for six months to one year.
             </p>
           </div>
-
-          <h2 class="text-2xl font-bold text-kd-black mb-6">Installation &amp; Diagnostics</h2>
-          <p class="text-kd-gray-600 leading-relaxed mb-6">
-            Beyond rebuilding, we offer a full range of electrical installation and diagnostic services for cars, trucks, SUVs, marine, and recreational vehicles:
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {electricalServices.map((s) => (
-              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
-                <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span class="text-sm text-kd-gray-700">{s}</span>
-              </div>
-            ))}
-          </div>
-
-          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Batteries &amp; Parts</h3>
-            <img src="/images/shop/battery-display.webp" alt="Deka automotive batteries displayed for sale" width="900" height="1200" loading="lazy" decoding="async" class="w-full max-w-sm mx-auto rounded-lg my-4" />
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              Automotive and equipment parts are sold directly to customers. Complete battery testing and replacement available.
-            </p>
-          </div>
-
-          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Modern Vehicle Upgrades</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              We install modern convenience and safety features in vehicles of any age &mdash; remote starters, backup cameras, Bluetooth hands-free and stereo upgrades, and LED lighting conversions.
-            </p>
-          </div>
         </div>
 
         <div class="lg:col-span-1">
-          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+          <div class="bg-kd-white rounded-xl p-6 border border-kd-gray-200 shadow-sm sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Call or Stop In</h3>
             <p class="text-sm text-kd-gray-600 mb-4">
               Call or stop in for an appointment.
@@ -117,5 +89,51 @@ const electricalServices = [
     </div>
   </section>
 
-  <ContactInfo compact />
+  <!-- Dark: Installation & Diagnostics (full-width visual break) -->
+  <section class="py-16 bg-kd-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-kd-white mb-6">Installation &amp; Diagnostics</h2>
+      <p class="text-kd-gray-300 leading-relaxed mb-8">
+        Beyond rebuilding, we offer a full range of electrical installation and diagnostic services for cars, trucks, SUVs, marine, and recreational vehicles:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
+        {electricalServices.map((s) => (
+          <div class="flex items-start gap-3 border-b border-kd-gray-700 pb-4">
+            <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-sm text-kd-gray-200">{s}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Light: Batteries & Parts (image-and-copy split) -->
+  <section class="py-16 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <img src="/images/shop/battery-display.webp" alt="Deka automotive batteries displayed for sale" width="900" height="1200" loading="lazy" decoding="async" class="w-full max-w-md mx-auto rounded-lg shadow-sm" />
+        <div>
+          <h2 class="text-2xl font-bold text-kd-black mb-4">Batteries &amp; Parts</h2>
+          <p class="text-kd-gray-600 leading-relaxed">
+            Automotive and equipment parts are sold directly to customers. Complete battery testing and replacement available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark: Modern Vehicle Upgrades (closing panel) -->
+  <section class="py-16 bg-kd-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-l-4 border-kd-red pl-5">
+        <h2 class="text-2xl font-bold text-kd-white">Modern Vehicle Upgrades</h2>
+      </div>
+      <p class="text-kd-gray-300 leading-relaxed mt-4 max-w-3xl">
+        We install modern convenience and safety features in vehicles of any age &mdash; remote starters, backup cameras, Bluetooth hands-free and stereo upgrades, and LED lighting conversions.
+      </p>
+    </div>
+  </section>
+
+  <ContactInfo compact dark />
 </Layout>
