@@ -1,47 +1,76 @@
 ---
-const testimonials = [
-  {
-    text: "Our car broke down outside of Somerset PA over President's Day weekend on our way to a family ski trip @ Seven Springs. The team at K&D were able to get our car in quickly, were great with communicating the process/expectations, and were able to get the car back to us so we could salvage our trip. I would highly recommend the team for the quality of their work and professionalism. Hoping I never break down outside of Somerset PA again, but if I do I know who I'm calling :)",
-    author: 'Darin Sharar',
-    source: 'Google',
-    rating: 5,
-  },
+import ReviewCard from './ReviewCard.astro';
+
+// Reviews are owner-supplied and must remain exact — never edit wording.
+// Order matters: featured reviews first, then the four shorter ones.
+const reviews = [
   {
     text: "I cannot recommend K&D Auto highly enough—they are true life-savers! My car died on the PA Turnpike due to an alternator failure, leaving me stranded and panicked hundreds of miles from home.\n\nWhen I called, Cam immediately understood the urgency of my situation. They didn't just fit me in; they went above and beyond by sourcing the necessary part lightning-fast and staying late to ensure the repair was completed the very same day. They treated my emergency like their own, keeping me updated with clear, honest communication throughout the entire process.\n\nThe service was impeccable, the price was fair, and the speed at which they got me safely back on the road was nothing short of heroic. If you're looking for an honest, skilled, and genuinely caring mechanic, especially in a crisis, look no further than Jeremy and the team at K&D. Thank you for turning a terrible breakdown into a smooth recovery!",
     author: 'Makeda V',
-    source: 'Google',
+    initials: 'MV',
+    quote: 'They went above and beyond.',
+    source: 'Google Review',
     rating: 5,
+    featured: 'primary',
+  },
+  {
+    text: "Our car broke down outside of Somerset PA over President's Day weekend on our way to a family ski trip @ Seven Springs. The team at K&D were able to get our car in quickly, were great with communicating the process/expectations, and were able to get the car back to us so we could salvage our trip. I would highly recommend the team for the quality of their work and professionalism. Hoping I never break down outside of Somerset PA again, but if I do I know who I'm calling :)",
+    author: 'Darin Sharar',
+    initials: 'DS',
+    source: 'Google Review',
+    rating: 5,
+    featured: 'secondary',
   },
   {
     text: "Fantastic people! You can trust them to do the work and not overcharge. They are honest and caring!!!",
     author: 'stacy mullins',
-    source: 'Google',
+    initials: 'SM',
+    source: 'Google Review',
     rating: 5,
   },
   {
     text: "What a very nice guy! My mom couldn't figure out what was going on with her car and he told us exactly what was wrong… we're bringing it back to him to fix the problem, they wanted to test drive to make sure we were safe too..very sweet and such a gentleman thank you!",
     author: 'Candace Collingridge',
-    source: 'Google',
+    initials: 'CC',
+    source: 'Google Review',
     rating: 5,
   },
   {
     text: "I absolutely love this place, they are amazing sweet kind considerate and always willing to be there for you at the very last minute. Trustworthy people all the way around from every employee all the way down to Jeremy being the owner. I've got my transmission taken care of they did an amazing job, an so many other things even down to the littlest task. Thank you for your loyalty your honesty and being trustworthy",
     author: 'Tonya Gonzalez',
-    source: 'Google',
+    initials: 'TG',
+    source: 'Google Review',
     rating: 5,
   },
   {
     text: "Had a wiring issue noone could find, took the car to these guys and they found the issue and fixed it. I can't say enough about their service. I highly recommend them for wiring issues great job",
     author: 'John Silk',
-    source: 'Google',
+    initials: 'JS',
+    source: 'Google Review',
     rating: 5,
   },
 ];
+
+// ---- Single source of truth for the Google review CTA ----
+// The old direct-review URL (search.google.com/local/reviews?placeid=...) 404s.
+// Google's official process: the verified Business Profile owner copies the
+// review-request link from Business Profile → Read reviews → Get more reviews.
+// Until that official link is provided, we link to a plain Google Maps search
+// labeled "Find K&D on Google" (never labeled as a review form).
+// When the official link arrives, paste it below and set isReviewRequest: true.
+const googleReviewCta = {
+  url: 'https://www.google.com/maps/search/?api=1&query=K%20%26%20D%20Auto%20Electric%2C%20212%20Forward%20Boulevard%2C%20Somerset%2C%20PA%2015501',
+  isReviewRequest: false,
+};
+
+const primary = reviews.find((r) => r.featured === 'primary');
+const secondary = reviews.find((r) => r.featured === 'secondary');
+const short = reviews.filter((r) => !r.featured);
 ---
 
-<section class="py-20 bg-kd-black">
+<section class="py-16 bg-kd-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
+    <div class="text-center mb-10">
       <span class="text-kd-yellow font-semibold text-sm uppercase tracking-wider">Customer Reviews</span>
       <h2 class="text-3xl sm:text-4xl font-black text-kd-white mt-2">What Our Customers Say</h2>
       <p class="text-kd-gray-400 mt-3 max-w-2xl mx-auto">
@@ -49,25 +78,29 @@ const testimonials = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      {testimonials.map((t) => (
-        <div class="bg-kd-gray-900 rounded-xl p-6 border border-kd-gray-800">
-          <div class="flex gap-1 mb-3">
-            {Array.from({ length: t.rating }).map(() => (
-              <svg class="w-4 h-4 text-kd-yellow" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <p class="text-sm text-kd-gray-300 leading-relaxed mb-3">&ldquo;{t.text}&rdquo;</p>
-          <p class="text-xs font-semibold text-kd-yellow">&mdash; {t.author}</p>
-        </div>
-      ))}
+    <!-- Featured reviews: Makeda V (primary, ~60%) + Darin Sharar (secondary, ~40%) -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 max-w-4xl mx-auto items-start">
+      <div class="lg:col-span-3">
+        <ReviewCard review={primary} large topAccent />
+      </div>
+      <div class="lg:col-span-2">
+        <ReviewCard review={secondary} large />
+      </div>
     </div>
 
-    <div class="text-center mt-8">
-      <a href="https://search.google.com/local/reviews?placeid=ChIJE5eH5pFzNIgR-V3-VYbY-cw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-kd-yellow hover:text-kd-white text-sm font-medium transition-colors">
-        Leave us a review on Google
+    <!-- Shorter reviews: two-column compact grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6 items-start">
+      {short.map((r) => <ReviewCard review={r} />)}
+    </div>
+
+    <div class="text-center mt-10">
+      <a
+        href={googleReviewCta.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-kd-yellow hover:text-kd-white text-sm font-medium transition-colors"
+      >
+        {googleReviewCta.isReviewRequest ? 'Leave us a review on Google' : 'Find K&D on Google'}
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
       </a>
     </div>
