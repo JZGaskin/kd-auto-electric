@@ -10,7 +10,7 @@ export interface Props {
   ogImage?: string;
 }
 
-const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Quality Service Since 1991. Locally, family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical, ogImage = '/images/KD_logo_dark.png' } = Astro.props;
+const { title = 'K & D Auto Electric, Inc. | Auto Electric & Automotive Repair in Somerset, PA', description = 'Quality Service Since 1991. Locally and family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, hydraulic hose repair, and more.', canonical, ogImage = '/images/KD_logo_dark.png' } = Astro.props;
 const siteUrl = 'https://kdautoelectric.com';
 const fullCanonical = canonical ? `${canonical.startsWith('http') ? '' : siteUrl}${canonical}` : siteUrl;
 ---
@@ -54,7 +54,7 @@ const fullCanonical = canonical ? `${canonical.startsWith('http') ? '' : siteUrl
       "@id": "https://kdautoelectric.com",
       "name": "K & D Auto Electric, Inc.",
       "slogan": "Quality Service Since 1991",
-      "description": "Quality Service Since 1991. Locally, family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, and more.",
+      "description": "Quality Service Since 1991. Locally and family owned auto electric and automotive repair in Somerset, PA. PA state inspections, engine performance, alternator rebuilding, and more.",
       "url": "https://kdautoelectric.com",
       "telephone": "(814) 443-3615",
       "email": "kdautoelectric@gmail.com",
