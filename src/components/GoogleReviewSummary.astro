@@ -1,150 +1,45 @@
 ---
-// Live Google AI review summary (Places API New).
-// The static HTML renders the compact fallback; a Netlify function is called
-// only when this section approaches the viewport. Google content is never
-// cached or stored, and the API key never leaves the server.
+// Customer feedback section — static, AI-assisted summary of the genuine
+// Google reviews collected for K&D. Rendered entirely from site content; no
+// API calls. Owner-approved wording, do not rewrite.
+import { googleReviewLinks } from '../data/google-review-links';
+
+const themes = [
+  'Honest communication',
+  'Difficult problems diagnosed',
+  'Fast help when it matters',
+  'Fair pricing and no overcharging',
+];
 ---
-<section id="google-review-summary" class="bg-kd-black py-16">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="border-t-4 border-t-kd-red pt-6">
-      <p id="grs-eyebrow" class="text-kd-yellow font-semibold text-sm uppercase tracking-wider">CUSTOMER FEEDBACK</p>
-      <h2 id="grs-heading" class="text-3xl sm:text-4xl font-black text-kd-white mt-2">See what customers are saying on Google</h2>
-      <div id="grs-content">
-        <p id="grs-body" class="mt-3 text-kd-gray-400 leading-relaxed">Read K&amp;D Auto Electric&rsquo;s current customer reviews directly on Google.</p>
-        <div id="grs-buttons" class="mt-6 flex flex-wrap gap-3" hidden></div>
+<section id="google-review-summary" class="bg-kd-black py-16" aria-labelledby="grs-heading">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="border-t-4 border-t-kd-red pt-6 lg:pt-8">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-start">
+        <!-- Left: eyebrow, heading, summary, disclosure -->
+        <div>
+          <p id="grs-eyebrow" class="text-kd-yellow font-semibold text-sm uppercase tracking-wider">AI CUSTOMER REVIEW SUMMARY</p>
+          <h2 id="grs-heading" class="mt-3 text-3xl sm:text-4xl font-black text-kd-white leading-tight">What customers consistently say about K&amp;D</h2>
+          <p class="mt-4 text-kd-gray-400 leading-relaxed">Customers describe K&amp;D Auto Electric as honest, responsive, and willing to go beyond a routine repair. Reviews frequently mention clear communication, fair pricing, fast help during stressful breakdowns, and the ability to diagnose electrical and mechanical problems that others could not solve. Customers also appreciate the team&rsquo;s personal attention, concern for safety, and willingness to help on short notice.</p>
+          <p class="mt-5 text-xs text-kd-gray-500 leading-relaxed">AI-assisted summary of customer reviews published on Google. Last updated August 2026.</p>
+        </div>
+        <!-- Right: theme highlights + Google buttons -->
+        <div class="mt-8 lg:mt-0">
+          <ul class="space-y-2.5">
+            {
+              themes.map((theme) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 h-2 w-2 shrink-0 rounded-sm bg-kd-red" aria-hidden="true"></span>
+                  <span class="text-kd-gray-300">{theme}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href={googleReviewLinks.readReviewsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-kd-red hover:bg-kd-red-dark text-kd-white font-semibold rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow">Read Current Reviews on Google</a>
+            <a href={googleReviewLinks.writeReviewUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-kd-gray-600 text-kd-white font-semibold rounded-lg hover:border-kd-gray-400 hover:text-kd-yellow transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow">Write a Google Review</a>
+          </div>
+        </div>
       </div>
-      <div id="grs-status" class="mt-4 text-sm text-kd-gray-400" role="status" aria-live="polite"></div>
     </div>
   </div>
 </section>
-
-<script>
-  (function () {
-    const section = document.getElementById('google-review-summary');
-    if (!section) return;
-
-    const eyebrow = document.getElementById('grs-eyebrow');
-    const heading = document.getElementById('grs-heading');
-    const content = document.getElementById('grs-content');
-    const buttons = document.getElementById('grs-buttons');
-    const status = document.getElementById('grs-status');
-    const FALLBACK_HEADING = 'See what customers are saying on Google';
-
-    let fired = false;
-
-    function btn(href, label, primary) {
-      const a = document.createElement('a');
-      a.href = href;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.className = primary
-        ? 'inline-flex items-center justify-center px-6 py-3 bg-kd-red text-kd-white font-semibold rounded-lg hover:bg-kd-red-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow'
-        : 'inline-flex items-center justify-center px-6 py-3 border border-kd-gray-600 text-kd-white font-semibold rounded-lg hover:border-kd-gray-400 hover:text-kd-yellow transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow';
-      a.textContent = label;
-      return a;
-    }
-
-    function link(href, label) {
-      const a = document.createElement('a');
-      a.href = href;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.className = 'text-kd-gray-400 underline underline-offset-2 hover:text-kd-yellow transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow';
-      a.textContent = label;
-      return a;
-    }
-
-    // Fallback state (default static HTML) with Google-provided links.
-    function showFallback(fb) {
-      if (heading.textContent.trim() !== FALLBACK_HEADING) {
-        eyebrow.textContent = 'CUSTOMER FEEDBACK';
-        heading.textContent = FALLBACK_HEADING;
-      }
-      buttons.replaceChildren();
-      if (fb && fb.readReviewsUri) buttons.appendChild(btn(fb.readReviewsUri, 'Read Reviews on Google', true));
-      if (fb && fb.writeReviewUri) buttons.appendChild(btn(fb.writeReviewUri, 'Write a Google Review', false));
-      buttons.hidden = !buttons.childElementCount;
-    }
-
-    // Google-provided summary — displayed exactly as returned, with the
-    // required "Review summary" heading, disclosure, links, and attribution.
-    function showSummary(s) {
-      eyebrow.textContent = 'AI CUSTOMER REVIEW SUMMARY';
-      heading.textContent = 'Review summary';
-
-      const summary = document.createElement('p');
-      summary.className = 'grs-summary mt-4 text-kd-gray-300 leading-relaxed';
-      summary.textContent = s.summaryText;
-
-      const disclosure = document.createElement('p');
-      disclosure.className = 'grs-disclosure mt-3 text-xs text-kd-gray-500 leading-relaxed';
-      disclosure.textContent = s.disclosureText;
-
-      const linksRow = document.createElement('div');
-      linksRow.className = 'mt-6 flex flex-wrap items-center gap-x-6 gap-y-3';
-      linksRow.appendChild(btn(s.reviewsUri, 'See reviews', true));
-      linksRow.appendChild(btn(s.writeReviewUri, 'Write a review', false));
-      linksRow.appendChild(link(s.aboutSummaryUri, 'About this summary'));
-      linksRow.appendChild(link(s.flagContentUri, 'Report summary'));
-
-      const attribution = document.createElement('div');
-      attribution.className = 'grs-logo mt-8 flex items-center gap-3';
-      const logoLink = document.createElement('a');
-      logoLink.href = s.reviewsUri;
-      logoLink.target = '_blank';
-      logoLink.rel = 'noopener noreferrer';
-      logoLink.className = 'inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kd-yellow';
-      const logo = document.createElement('img');
-      logo.src = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
-      logo.alt = 'Google';
-      logo.width = 73;
-      logo.height = 25;
-      logo.className = 'h-6 w-auto';
-      logoLink.appendChild(logo);
-      const attrText = document.createElement('span');
-      attrText.className = 'text-xs text-kd-gray-500';
-      attrText.textContent = 'Powered by Google';
-      attribution.appendChild(logoLink);
-      attribution.appendChild(attrText);
-
-      content.replaceChildren(summary, disclosure, linksRow, attribution);
-    }
-
-    function load() {
-      if (fired) return;
-      fired = true;
-      status.textContent = 'Loading\u2026';
-      fetch('/.netlify/functions/google-review-summary')
-        .then((res) => {
-          if (!res.ok) throw new Error('unavailable');
-          return res.json();
-        })
-        .then((data) => {
-          status.textContent = '';
-          if (data && data.enabled === true) {
-            if (data.hasSummary === true && data.summary) showSummary(data.summary);
-            else showFallback(data.fallback || null);
-          }
-          // disabled: keep the static fallback exactly as rendered
-        })
-        .catch(() => {
-          status.textContent = '';
-        });
-    }
-
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver(
-        (entries) => {
-          if (entries.some((e) => e.isIntersecting)) {
-            io.disconnect();
-            load();
-          }
-        },
-        { rootMargin: '300px' }
-      );
-      io.observe(section);
-    } else {
-      load();
-    }
-  })();
-</script>

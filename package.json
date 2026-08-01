@@ -6,12 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "test": "node --test tests/google-review-summary.test.mjs",
-    "test:output": "node tests/client-output.test.mjs",
-    "test:e2e": "node tests/mobile-review-summary.test.mjs",
-    "test:all": "npm test && npm run test:output && npm run test:e2e",
-    "validate:place": "node scripts/validate-place-id.mjs"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
