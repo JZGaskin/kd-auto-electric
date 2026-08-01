@@ -31,6 +31,7 @@ const services = [
     </div>
   </section>
 
+  <!-- White: Engine & Transmission Services + sticky call card -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
@@ -43,32 +44,18 @@ const services = [
             When your vehicle needs major powertrain work, trust the experienced mechanics at K &amp; D Auto Electric. New and used replacement engines are available. We guide you toward affordable options that match your budget and needs, whether that means a replacement engine or a rebuild.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
             {services.map((s) => (
-              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
+              <div class="flex items-start gap-3 border-b border-kd-gray-200 pb-4">
                 <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span class="text-sm text-kd-gray-700">{s}</span>
               </div>
             ))}
           </div>
-
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200 mb-6">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Engine Replacement</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              New and used replacement engines are available. When yours reaches the end, we help you find the right replacement and install it carefully from start to finish. We explain all your options so you only buy what you need.
-            </p>
-          </div>
-
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Transmission Service</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              From fluid checks and filter changes to complete transmission replacement, we handle both automatic and manual transmissions. Our technicians perform thorough diagnostics and programming to keep your transmission running smoothly mile after mile.
-            </p>
-          </div>
         </div>
 
         <div class="lg:col-span-1">
-          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+          <div class="bg-kd-white rounded-xl p-6 border border-kd-gray-200 shadow-sm sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Need an Estimate?</h3>
             <p class="text-sm text-kd-gray-600 mb-4">
               Call us to discuss your vehicle&apos;s needs and get an estimate.
@@ -85,5 +72,26 @@ const services = [
     </div>
   </section>
 
-  <ContactInfo compact />
+  <!-- Dark: Engine Replacement + Transmission Service -->
+  <section class="py-16 bg-kd-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="rounded-xl border border-kd-gray-700 p-6">
+          <h2 class="font-bold text-lg text-kd-white mb-2">Engine Replacement</h2>
+          <p class="text-sm text-kd-gray-300 leading-relaxed">
+            New and used replacement engines are available. When yours reaches the end, we help you find the right replacement and install it carefully from start to finish. We explain all your options so you only buy what you need.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-kd-gray-700 p-6">
+          <h2 class="font-bold text-lg text-kd-white mb-2">Transmission Service</h2>
+          <p class="text-sm text-kd-gray-300 leading-relaxed">
+            From fluid checks and filter changes to complete transmission replacement, we handle both automatic and manual transmissions. Our technicians perform thorough diagnostics and programming to keep your transmission running smoothly mile after mile.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactInfo compact dark />
 </Layout>

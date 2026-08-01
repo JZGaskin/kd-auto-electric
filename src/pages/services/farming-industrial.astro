@@ -36,6 +36,7 @@ const services = [
     </div>
   </section>
 
+  <!-- White: Farm & Industrial Services + sticky call card -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
@@ -48,32 +49,18 @@ const services = [
             K &amp; D Auto Electric is a major supplier of John Deere flat face fittings and adapters in Somerset County. Beyond parts, our experienced technicians provide comprehensive electrical and mechanical repair for tractors, combines, heavy trucks, and industrial equipment &mdash; keeping your operation running efficiently.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
             {services.map((s) => (
-              <div class="flex items-start gap-3 p-4 bg-kd-gray-50 rounded-lg border border-kd-gray-200">
+              <div class="flex items-start gap-3 border-b border-kd-gray-200 pb-4">
                 <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span class="text-sm text-kd-gray-700">{s}</span>
               </div>
             ))}
           </div>
-
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200 mb-6">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Hydraulic Hoses</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              Hydraulic hose repair and custom manufacturing. We carry a huge inventory of hose and fittings, and hoses are made while you wait.
-            </p>
-          </div>
-
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">On-Site Service</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              On-site service is available depending on our schedule.
-            </p>
-          </div>
         </div>
 
         <div class="lg:col-span-1">
-          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+          <div class="bg-kd-white rounded-xl p-6 border border-kd-gray-200 shadow-sm sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Call or Stop In</h3>
             <p class="text-sm text-kd-gray-600 mb-4">
               Call us for parts availability or to schedule service.
@@ -90,5 +77,26 @@ const services = [
     </div>
   </section>
 
-  <ContactInfo compact />
+  <!-- Dark: Hydraulic Hoses + On-Site Service -->
+  <section class="py-16 bg-kd-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="rounded-xl border border-kd-gray-700 p-6">
+          <h2 class="font-bold text-lg text-kd-white mb-2">Hydraulic Hoses</h2>
+          <p class="text-sm text-kd-gray-300 leading-relaxed">
+            Hydraulic hose repair and custom manufacturing. We carry a huge inventory of hose and fittings, and hoses are made while you wait.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-kd-gray-700 p-6">
+          <h2 class="font-bold text-lg text-kd-white mb-2">On-Site Service</h2>
+          <p class="text-sm text-kd-gray-300 leading-relaxed">
+            On-site service is available depending on our schedule.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactInfo compact dark />
 </Layout>

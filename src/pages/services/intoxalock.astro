@@ -29,6 +29,7 @@ const services = [
     </div>
   </section>
 
+  <!-- White: Complete Intoxalock Services + sticky call card -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
@@ -37,36 +38,30 @@ const services = [
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div class="lg:col-span-2">
           <h2 class="text-2xl font-bold text-kd-black mb-6">Complete Intoxalock Services</h2>
-          <p class="text-kd-gray-600 leading-relaxed mb-6">
+          <p class="text-kd-gray-600 leading-relaxed mb-8">
             K &amp; D Auto Electric is a certified Intoxalock installer. We guide you through every step, from installation through removal, so you can focus on meeting your requirements.
           </p>
 
-          <div class="space-y-4 mb-8">
+          <div class="space-y-5 mb-8">
             {services.map((s) => (
-              <div class="p-5 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-                <h3 class="font-bold text-kd-black mb-1">{s.title}</h3>
-                <p class="text-sm text-kd-gray-600">{s.desc}</p>
+              <div class="flex items-start gap-3 border-b border-kd-gray-200 pb-5">
+                <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <div>
+                  <h3 class="font-bold text-kd-black mb-1">{s.title}</h3>
+                  <p class="text-sm text-kd-gray-600">{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div class="p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">How It Works</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              The Intoxalock ignition interlock device requires a breath sample before the vehicle will start. If alcohol is detected, the vehicle will not start. The device is easy to use, with a simple one-button design, and our technicians demonstrate proper use after installation.
-            </p>
-          </div>
-
-          <div class="mt-6">
-            <a href="https://www.intoxalock.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-kd-red hover:text-kd-red-dark text-sm font-medium transition-colors">
-              Learn more about Intoxalock devices
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-            </a>
-          </div>
+          <a href="https://www.intoxalock.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-kd-red hover:text-kd-red-dark text-sm font-medium transition-colors">
+            Learn more about Intoxalock devices
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
 
         <div class="lg:col-span-1">
-          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+          <div class="bg-kd-white rounded-xl p-6 border border-kd-gray-200 shadow-sm sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Schedule Installation</h3>
             <p class="text-sm text-kd-gray-600 mb-4">
               Call us to schedule your Intoxalock installation or service appointment. Our dedicated Intoxalock line is <a href="tel:8332740238" class="text-kd-red font-medium hover:text-kd-red-dark">(833) 274-0238</a>.
@@ -83,5 +78,17 @@ const services = [
     </div>
   </section>
 
-  <ContactInfo compact />
+  <!-- Dark: How It Works -->
+  <section class="py-16 bg-kd-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-l-4 border-kd-red pl-5">
+        <h2 class="text-2xl font-bold text-kd-white">How It Works</h2>
+      </div>
+      <p class="text-kd-gray-300 leading-relaxed mt-4 max-w-3xl">
+        The Intoxalock ignition interlock device requires a breath sample before the vehicle will start. If alcohol is detected, the vehicle will not start. The device is easy to use, with a simple one-button design, and our technicians demonstrate proper use after installation.
+      </p>
+    </div>
+  </section>
+
+  <ContactInfo compact dark />
 </Layout>

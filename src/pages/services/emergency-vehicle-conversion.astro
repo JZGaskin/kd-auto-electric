@@ -32,6 +32,7 @@ const services = [
     </div>
   </section>
 
+  <!-- White: Conversion & Upfitting Services + sticky call card -->
   <section class="py-16 bg-kd-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
@@ -44,25 +45,18 @@ const services = [
             K &amp; D Auto Electric provides complete emergency vehicle conversion services for first responder agencies. We help transform vehicles into functional mobile command centers, handling everything from basic equipment installation to full vehicle upfitting. Our team works with each department to determine the optimal layout and equipment placement.
           </p>
 
-          <ul class="space-y-4">
+          <ul class="space-y-5">
             {services.map((s) => (
-              <li class="flex items-start gap-3">
+              <li class="flex items-start gap-3 border-b border-kd-gray-200 pb-4">
                 <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span class="text-kd-gray-700">{s}</span>
               </li>
             ))}
           </ul>
-
-          <div class="mt-8 p-6 bg-kd-gray-50 rounded-xl border border-kd-gray-200">
-            <h3 class="font-bold text-lg text-kd-black mb-2">Trusted by Local First Responders</h3>
-            <p class="text-sm text-kd-gray-600 leading-relaxed">
-              K &amp; D Auto Electric is trusted by local police, fire, and EMS departments. We provide ongoing fleet maintenance for emergency vehicles.
-            </p>
-          </div>
         </div>
 
         <div class="lg:col-span-1">
-          <div class="bg-kd-gray-50 rounded-xl p-6 border border-kd-gray-200 sticky top-24">
+          <div class="bg-kd-white rounded-xl p-6 border border-kd-gray-200 shadow-sm sticky top-24">
             <h3 class="font-bold text-kd-black mb-4">Department Inquiries</h3>
             <p class="text-sm text-kd-gray-600 mb-4">
               Call us to discuss your fleet&apos;s upfitting needs.
@@ -79,5 +73,17 @@ const services = [
     </div>
   </section>
 
-  <ContactInfo compact />
+  <!-- Dark: Trusted by Local First Responders -->
+  <section class="py-16 bg-kd-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-l-4 border-kd-red pl-5">
+        <h2 class="text-2xl font-bold text-kd-white">Trusted by Local First Responders</h2>
+      </div>
+      <p class="text-kd-gray-300 leading-relaxed mt-4 max-w-3xl">
+        K &amp; D Auto Electric is trusted by local police, fire, and EMS departments. We provide ongoing fleet maintenance for emergency vehicles.
+      </p>
+    </div>
+  </section>
+
+  <ContactInfo compact dark />
 </Layout>
