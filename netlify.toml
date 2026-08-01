@@ -45,6 +45,31 @@
   status = 301
   force = true
 
+# Retired Service Areas page → Contact
+[[redirects]]
+  from = "/service-areas"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas/*"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas-served"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas-served/*"
+  to = "/contact/"
+  status = 301
+  force = true
+
 # 404 handling
 [[redirects]]
   from = "/*"

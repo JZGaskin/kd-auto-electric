@@ -6,3 +6,8 @@
 /emergency-vehicle-conversion/*   /services/emergency-vehicle-conversion/   301!
 /complete-transmission-engine-replacement/*   /services/transmission-engine-replacement/   301!
 /contact-us/*   /contact/   301!
+# Retired Service Areas page → Contact
+/service-areas   /contact/   301!
+/service-areas/*   /contact/   301!
+/areas-served   /contact/   301!
+/areas-served/*   /contact/   301!
