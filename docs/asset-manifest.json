@@ -1,0 +1,93 @@
+[
+  {
+    "file": "/images/hero/kd-hero-workshop.webp",
+    "source": "AI-generated illustration",
+    "placement": "Homepage hero background",
+    "alt": "Illustration of a busy auto electrical repair workshop with vehicles and diagnostic equipment",
+    "notes": "Use a dark left-to-right overlay behind HTML hero text. Do not describe it as an actual photograph of K&D staff or its shop."
+  },
+  {
+    "file": "/images/services/automotive-electric.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Automotive Electric homepage card and service page",
+    "alt": "Remote-start mobile app displayed inside an automotive electrical shop",
+    "notes": "Authentic K&D commercial footage."
+  },
+  {
+    "file": "/images/services/automotive-repair.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Automotive Repair homepage card and service page",
+    "alt": "Technician using diagnostic equipment beside a vehicle in the repair shop",
+    "notes": "Authentic K&D commercial footage."
+  },
+  {
+    "file": "/images/services/farming-industrial.webp",
+    "source": "AI-generated illustration",
+    "placement": "Farming & Industrial homepage card and service page",
+    "alt": "Illustration of a technician repairing a farm tractor and hydraulic systems in a workshop",
+    "notes": "Illustrative service image; do not identify the technician as K&D staff."
+  },
+  {
+    "file": "/images/services/emergency-vehicle-conversion.webp",
+    "source": "AI-generated illustration",
+    "placement": "Emergency Vehicle Conversion homepage card and service page",
+    "alt": "Illustration of a technician installing emergency lighting and electrical equipment in a police-style SUV",
+    "notes": "Illustrative service image; do not imply a specific police department or vehicle."
+  },
+  {
+    "file": "/images/services/transmission-engine.webp",
+    "source": "Owner-supplied photograph",
+    "placement": "Transmission & Engine homepage card and service page",
+    "alt": "Vehicle engine and front assembly removed during major repair work",
+    "notes": "Authentic K&D photo."
+  },
+  {
+    "file": "/images/services/intoxalock.webp",
+    "source": "Owner-supplied Intoxalock promotional image",
+    "placement": "Intoxalock homepage card and service page",
+    "alt": "Intoxalock mobile app displayed on a smartphone",
+    "notes": "Use as supplied; do not rewrite claims shown inside the promotional artwork."
+  },
+  {
+    "file": "/images/shop/shop-interior.webp",
+    "source": "Owner-supplied photograph",
+    "placement": "About, homepage shop section, or Contact page",
+    "alt": "Interior of the K&D Auto Electric repair shop with vehicles in service bays",
+    "notes": "Authentic K&D photo."
+  },
+  {
+    "file": "/images/shop/battery-display.webp",
+    "source": "Owner-supplied photograph",
+    "placement": "Automotive Electric or parts-sales section",
+    "alt": "Deka automotive batteries displayed for sale",
+    "notes": "Authentic K&D photo."
+  },
+  {
+    "file": "/images/shop/customer-counter.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Homepage customer-service or About section",
+    "alt": "Customer speaking with a K&D employee at the service counter",
+    "notes": "Authentic K&D commercial footage."
+  },
+  {
+    "file": "/images/shop/shop-front.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Contact page or Visit Us section",
+    "alt": "Entrance to K&D Auto Electric in Somerset, Pennsylvania",
+    "notes": "Authentic K&D commercial footage."
+  },
+  {
+    "file": "/images/shop/building-sign.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Service Areas or Contact page",
+    "alt": "K&D Auto Electric service truck, roadside sign, and shop building",
+    "notes": "Authentic K&D commercial footage."
+  },
+  {
+    "file": "/images/shop/under-hood-service.webp",
+    "source": "Still extracted from K&D commercial",
+    "placement": "Automotive Repair or Transmission & Engine detail section",
+    "alt": "Technician performing hands-on repair work under a vehicle hood",
+    "notes": "Authentic K&D commercial footage."
+  }
+]

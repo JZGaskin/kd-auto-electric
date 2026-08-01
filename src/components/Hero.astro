@@ -27,9 +27,21 @@ const { title = 'Auto Electric & Automotive Repair in Somerset, PA', subtitle = 
     </div>
   )}
 
-  <!-- Fallback background gradient -->
+  <!-- Hero background image -->
   {!showVideo && (
-    <div class="absolute inset-0 bg-gradient-to-br from-kd-black via-kd-gray-900 to-kd-red/20"></div>
+    <div class="absolute inset-0 w-full h-full">
+      <img
+        src="/images/hero/kd-hero-workshop.webp"
+        alt="Illustration of a busy auto electrical repair workshop with vehicles and diagnostic equipment"
+        class="w-full h-full object-cover"
+        width="1600"
+        height="900"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <!-- Dark left-to-right gradient for text readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-kd-black/95 via-kd-black/70 to-kd-black/30"></div>
+    </div>
   )}
 
   <!-- Content -->

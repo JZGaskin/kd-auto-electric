@@ -34,6 +34,47 @@ import ContactInfo from '../components/ContactInfo.astro';
   </section>
 
   <ServicesGrid />
+
+  <!-- About / Shop -->
+  <section class="py-20 bg-kd-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-kd-red font-semibold text-sm uppercase tracking-wider">About Us</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-kd-black mt-2">Locally, Family Owned Since 1991</h2>
+          <p class="text-kd-gray-600 leading-relaxed mt-4">
+            K &amp; D Auto Electric, Inc. is a locally, family owned business serving Somerset and Cambria counties. Quality Service Since 1991. Call or stop in for an appointment.
+          </p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3 text-sm text-kd-gray-700">
+              <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              PA state inspections for cars, trucks, motorcycles, and more
+            </li>
+            <li class="flex items-start gap-3 text-sm text-kd-gray-700">
+              <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Alternator, starter, generator, and magneto rebuilding
+            </li>
+            <li class="flex items-start gap-3 text-sm text-kd-gray-700">
+              <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Hydraulic hose repair and custom manufacturing
+            </li>
+            <li class="flex items-start gap-3 text-sm text-kd-gray-700">
+              <svg class="w-5 h-5 text-kd-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              New and used engine replacement
+            </li>
+          </ul>
+          <a href="tel:8144433615" class="inline-flex items-center gap-2 bg-kd-red hover:bg-kd-red-dark text-kd-white font-bold px-6 py-3 rounded-lg mt-8 transition-colors">
+            (814) 443-3615
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <img src="/images/shop/shop-interior.webp" alt="Interior of the K&D Auto Electric repair shop with vehicles in service bays" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-xl aspect-[3/2]" />
+          <img src="/images/shop/customer-counter.webp" alt="Customer speaking with a K&D employee at the service counter" width="1200" height="675" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-xl aspect-[3/2]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <Testimonials />
   <ContactInfo />
 
