@@ -23,8 +23,17 @@ const EXPECTED = {
 
 const BASE = 'https://places.googleapis.com/v1';
 
+const STREET_ABBR = { boulevard: 'blvd', avenue: 'ave', street: 'st', road: 'rd', drive: 'dr', lane: 'ln', highway: 'hwy', route: 'rte', 'highway ': 'hwy' };
+
 function norm(s) {
-  return String(s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+  // lowercase, collapse whitespace, drop punctuation/ampersands: "K&D" == "k & d"
+  return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+}
+
+function streetNorm(s) {
+  let out = norm(s);
+  for (const [full, abbr] of Object.entries(STREET_ABBR)) out = out.replace(new RegExp('\\b' + full + '\\b', 'g'), abbr);
+  return out;
 }
 
 async function placeDetails(apiKey, placeId) {
@@ -65,10 +74,12 @@ function check(place, label) {
   const issues = [];
   const name = norm(place.displayName && place.displayName.text);
   const addr = norm(place.formattedAddress);
+  const addrStreet = streetNorm(place.formattedAddress);
+  const street = streetNorm(EXPECTED.street);
   const phone = (place.internationalPhoneNumber || '').replace(/[^\d+]/g, '');
 
-  if (!name.includes(EXPECTED.name)) issues.push(`name "${place.displayName?.text}" != ${EXPECTED.name}`);
-  if (!addr.includes(EXPECTED.street)) issues.push(`address lacks "${EXPECTED.street}" (got: ${addr})`);
+  if (name !== norm(EXPECTED.name)) issues.push(`name "${place.displayName?.text}" != ${EXPECTED.name}`);
+  if (!addrStreet.includes(street)) issues.push(`address lacks "${EXPECTED.street}" (got: ${addr})`);
   if (!addr.includes(EXPECTED.locality)) issues.push(`address lacks "${EXPECTED.locality}"`);
   if (!addr.includes(EXPECTED.region)) issues.push(`address lacks "${EXPECTED.region}"`);
   if (!addr.includes(EXPECTED.postal)) issues.push(`address lacks "${EXPECTED.postal}"`);
