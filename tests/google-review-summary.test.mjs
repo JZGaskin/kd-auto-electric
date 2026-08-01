@@ -4,14 +4,14 @@
  */
 import { test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { handler, sanitizeGoogleUrl } from './google-review-summary.mjs';
+import { handler, sanitizeGoogleUrl } from '../netlify/functions/google-review-summary.mjs';
 import {
   summaryResponse,
   noSummaryResponse,
   bareResponse,
   googleErrorBody,
   summaryWithBadLinks,
-} from '../../tests/fixtures.mjs';
+} from './fixtures.mjs';
 
 const origEnv = { ...process.env };
 const ORIG_FETCH = globalThis.fetch;
