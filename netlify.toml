@@ -70,8 +70,34 @@
   status = 301
   force = true
 
+# Retired county pages → Contact
+[[redirects]]
+  from = "/somerset-county-pa"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/somerset-county-pa/*"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cambria-county-pa"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cambria-county-pa/*"
+  to = "/contact/"
+  status = 301
+  force = true
+
 # 404 handling
 [[redirects]]
   from = "/*"
   to = "/404/"
   status = 404
+

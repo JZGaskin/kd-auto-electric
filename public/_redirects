@@ -11,3 +11,8 @@
 /service-areas/*   /contact/   301!
 /areas-served   /contact/   301!
 /areas-served/*   /contact/   301!
+# Retired county pages → Contact
+/somerset-county-pa   /contact/   301!
+/somerset-county-pa/*   /contact/   301!
+/cambria-county-pa   /contact/   301!
+/cambria-county-pa/*   /contact/   301!
